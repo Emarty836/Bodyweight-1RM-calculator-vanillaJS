@@ -4,9 +4,37 @@
 
 }
 
+#bodyPrompt{
+  /* border:solid 1px black; */
+  margin-top:-10px;
+}
+
+.bodyweightBox{
+  /* background:red; */
+  display:none;
+}
+
+#choiceBox{
+  /* border:solid 1px black; */
+  width:250px;
+  margin-left:49%;
+  transform:translateX(-50%);
+}
+
+input[type='radio']{
+  margin-left:-10px;
+}
+
+.choice{
+  /* border:1px solid red; */
+  margin:0px;
+  margin-left:-20px;
+}
+
 #inputBox{
   border-bottom:black solid 2px;
-  background:#848eb1;
+  background:#6e8dfd;
+  /* background:rgb(100, 230, 198);  -  for fixing purposes */
 }
 
 .sample{
@@ -15,6 +43,7 @@
   padding-top:48px;
   padding-bottom:48px;
   margin-top: 0px;
+  height:580px;
 }
 
 .sample2{
@@ -41,7 +70,8 @@
 }
 
 .main{
-  background:#848eb1;
+  /* background:#848eb1; */
+  background:#6e8dfd;
   width:80%;
   position:absolute;
   left:10%;
@@ -129,7 +159,7 @@ color:rgba(91,2,18,1);
   outline:solid 2px black;
   min-height:100%;
   padding:10px;
-  margin-top:528px;
+  margin-top:580px;
 }
 
 #info{
@@ -189,6 +219,14 @@ font-size:100px;}
 
   input{
     font-size:1.25em;
+  }
+
+  input[type='radio']{
+    margin-left:-10px;
+  }
+
+  .choice{
+    display:inline-block;
   }
 
   #button1, #reset{

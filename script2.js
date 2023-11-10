@@ -11,6 +11,25 @@ var minus2 = document.querySelector('#minus2');
 var minus3 = document.querySelector('#minus3');
 const sample = document.querySelector('#inputBox');
 const tab = document.querySelector('.tab');
+const yes = document.querySelector('#yes');
+const no = document.querySelector('#no');
+const bodyBox = document.querySelector('.bodyweightBox');
+
+yes.addEventListener('click',()=>{
+  bodyBox.style.display = 'block';
+  button1.addEventListener('click', calculate,{once:true});
+});
+
+no.addEventListener('click',()=>{
+  bodyBox.style.display = 'none';
+  input1.value = 0;
+  button1.addEventListener('click', calculate,{once:true});
+});
+
+document.addEventListener('DOMContentLoaded',()=>{
+  no.checked=true;
+  //Decided to revert to check NO at reload since the CSS settings for bodyBox(js)/.bodyweightBox(css) is display none.
+});
 
 var activate = false;
 var scrollMark = window.scrollY;
@@ -21,7 +40,7 @@ function scrollData(x){
   console.log(activate);
   //console.log(scrollMark);
   
-  if (scrollMark < 225){
+  if (scrollMark < 250){
     var activate = false;
     sample.classList.add('sample');
     sample.classList.remove('sample2');
@@ -31,7 +50,7 @@ function scrollData(x){
         tab.style.top = '0';
     //window.removeEventListener('resize', checkMediaQuery);
   }
-  else if (scrollMark > 674){
+  else if (scrollMark > 774){
     
     tab.style.display = 'block';
   
@@ -621,6 +640,16 @@ if (bodyweight === 0 || !bodyweight)
     button1.addEventListener('click', () => {
        sample.remove();
      })
+   });
+   yes.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+       sample.remove();
+     })
+   });
+   no.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+       sample.remove();
+     })
    }); 
 
 } ///end of if
@@ -678,6 +707,16 @@ else{
       result.remove();
     })
   });
+  yes.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+       result.remove();
+     })
+   });
+   no.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+       result.remove();
+     })
+   }); 
 }  // end of else
 }
 

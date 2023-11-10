@@ -19,14 +19,21 @@
   <h1 class="bg-secondary text-white p-5 m-0 text-uppercase display-6">21 plus Rep Max Calculator</h1>
   <div id='inputBox' class="lh-lg sample">
   <form>
-    
+    <p id="bodyPrompt">Is it a bodyweight exercise:</p>
+    <div id="choiceBox">
+    <input type='radio' name='choice' id="no" checked><label class='choice' for="no">No</label>
+    <input type='radio' name='choice' id="yes"><label class='choice' for="yes">Yes</label><br>
+  </div>
+    <div class="bodyweightBox">
     <label class="p-1" for="first">Enter bodyweight(lb/kg):</label>
       <div class="input-flex">
       <button type='button' id="minus1" class="minus rounded-5">-</button>
       <input type="text" id="first" name="first" value="0">
       <button type='button' id='add1' class="add rounded-5">+</button>
       </div>
-  <span class="stuff">-&nbsp;leave first value as 0 if not a body-weight exercise.</span><br>
+    
+  <!-- <span class="stuff">-&nbsp;leave first value as 0 if not a body-weight exercise.</span><br> -->
+</div>
   
     <label class="p-1" for="second">Enter loaded weight(lb/kg):</label>
       <div class="input-flex">
