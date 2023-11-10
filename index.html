@@ -1,144 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
-    <title>Evan Martinez's Portfolio</title>
-    
+  <meta charset="utf-8"/> 
+  <meta name="viewport" content="width=device-width, initial=1.0"/>
+  <title>
+    21+ Rep Max Calculator
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <nav>
-        <div><a href=#home>HOME</a></div>
-        <ul>
-            <!-- <a href='https://github.com/Emarty836' target="_blank"><svg xmlns="http://www.w3.org/2000/svg"  style='background-color:white' width="65" height="55" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a> -->
-            <a href='https://github.com/Emarty836' target="_blank">Github</a>
-            <!-- <a href="https://www.linkedin.com/in/evan-martinez-82217b225/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill='#ffffff' style='background-color:rgb(49, 145, 255)' width="65" height="55" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a> -->
-            <a href="https://www.linkedin.com/in/evan-martinez-82217b225/" target="_blank">Linked-in</a>
-            <!-- <a href='#projects-link'>Projects</a> -->
-            <a href="https://docs.google.com/document/d/1T2TTqvjPwKBpsaN0Aj7ehHcusOeh6_nqOyUHkFapOCk/edit?usp=sharing" target="_">Resume</a>
-        </ul>
-    </nav>
-    <section class="intro-div" id="home">
-        <div class="intro"><h1>Hi, my name is Evan Martinez</h1><h2>I'm a front end developer based in Los Angeles.  </h2></div>
-    </section>
-    <section class="projects" id="projects-link">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div><div class="projectBanner"><p>21 Plus Rep Max Calculator [Bootstrap]</p></div><div class="view"><span>View Project #1</span></div></div>
-            <div><div class="projectBanner"><p class="dotaText">Personal Edit of Dota 2 Hero Roster [React] [Tailwind]</p></div><div class="view"><span>View Project #2</span></div></div>
-            <div><div class="projectBanner"><p>FPS Timed Target Practice</p></div><div class="view"><span>View Project #3</span></div></div>
-            <div><div class="projectBanner"><p>Replica #1: Peacock Sign-in page</p></div><div class="view"><span>View Project #4</span></div></div>
-            <div><div class="projectBanner"><p>Pokemon Card Generator (2nd gen) [React]</p></div><div class="view"><span>View Project #5</span></div></div>
-        </div>
-    </section>
+<body class="m-0 p-0 ">
+<div class="main m-auto p-0 text-center min-100">
+  <h1 class="bg-secondary text-white p-5 m-0 text-uppercase display-6">21 plus Rep Max Calculator</h1>
+  <div id='inputBox' class="lh-lg sample">
+  <form>
+    <p id="bodyPrompt">Is it a bodyweight exercise:</p>
+    <div id="choiceBox">
+    <input type='radio' name='choice' id="no" checked><label class='choice' for="no">No</label>
+    <input type='radio' name='choice' id="yes"><label class='choice' for="yes">Yes</label><br>
+  </div>
+    <div class="bodyweightBox">
+    <label class="p-1" for="first">Enter bodyweight(lb/kg):</label>
+      <div class="input-flex">
+      <button type='button' id="minus1" class="minus rounded-5">-</button>
+      <input type="text" id="first" name="first" value="0">
+      <button type='button' id='add1' class="add rounded-5">+</button>
+      </div>
+    
+  <!-- <span class="stuff">-&nbsp;leave first value as 0 if not a body-weight exercise.</span><br> -->
+</div>
+  
+    <label class="p-1" for="second">Enter loaded weight(lb/kg):</label>
+      <div class="input-flex">
+      <button type='button' id="minus2" class="minus rounded-5">-</button>
+      <input type="text" id="second" name="second"><br>
+      <button type='button' id='add2' class="add rounded-5">+</button>
+      </div>
+    <label class="p-1" for="third">Enter rep amount (1-36):</label>
+      <div class="input-flex">
+      <button type='button' id="minus3" class="minus rounded-5">-</button>
+      <input type="text" id="third" name="third" value="1"><br>
+      <button type='button' id='add3' class="add rounded-5">+</button>
+      </div>
+  <button type="button" id='button1' class="m-1 mt-3 py-2 px-3 text-uppercase rounded-2">Calculate!</button><br>
+  <button type="button" id="reset" class="m-1 py-2 px-3 text-uppercase rounded-2">Reset!</button>
+  
+  
 
-<!------------------------  Preview Boxes ------------------->
-    <div id="P1" class="preview">
-        <div class="pLeft"></div>
-        <div class="pRight">
-            <div class="xBox"><svg xmlns="http://www.w3.org/2000/svg" fill='#ffffff' width="16" height="16" viewBox="0 0 24 24"><path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/></svg></div>
-            <h3>Project #1</h3>
-            <h2>36 Rep Max Calculator</h2>
-            <p>This was my first project which included <b>HTML, CSS</b> with <b>Bootstrap, and Vanilla Javascript.</b>  I've also recently made some small changes with <b>Typescript</b>.  I often used a 20 rep max calulator during or outside of my strength training workouts to figure out my 1 rep max each time to plan my appropriate sequential weights and reps for the next workout.  This is the first website that I know of that calculates both bodyweight and external weight with reps to calculate one rep max as well as extend past 20 reps.<br><br>Note: This was the first website I've ever hosted.  I use it at least a few days a week and has proven to be very useful.</b></p>
-            <div class="link-flex">
-                <a href='https://21plusrepmax.com/' target="_" rel='noopener noreferrer'><div class='site'>Website</div></a>
-                <a href='https://github.com/Emarty836/Bodyweight-1RM-calculator-vanillaJS' target="_" rel='noopener noreferrer'><div class='github'>Github</div></a>
-            </div>
-        </div>
-    </div>
 
-    <div id="P2" class="preview">
-        <div class="pLeft"></div>
-        <div class="pRight">
-            <div class="xBox"><svg xmlns="http://www.w3.org/2000/svg" fill='#ffffff' width="16" height="16" viewBox="0 0 24 24"><path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/></svg></div>
-            <h3>Project #2</h3>
-            <h2>Dota 2 Roster Name Change</h2>
-            <p>Dota 2 is one of my favorite PC games and at the beginning we often labeled a hero a completely different character for convinience and comedic value(eg. Crystal Maiden as Elsa from Frozen).
-                I used <b>HTML, Tailwind CSS, and React.JS</b> to create a third edit of this project.  I also have an original version of <a href ="https://emarty836.github.io/Dota2RosterNameChange/" target="_" rel='noopener noreferrer'>this website</a> using <b>HTML</b>, <b>CSS</b>, and <b>vanilla JS</b> with its <a href="https://github.com/Emarty836/Dota2RosterNameChange" target="_" rel='noopener noreferrer'>github link</a>.
-            </p>
-            <div class="link-flex">
-                <a href='https://emarty836.github.io/React-Tailwind_Dota2RosterNameChange/' target='_blank' rel='noopener noreferrer'><div class='site'>Website</div></a>
-                <a href="https://github.com/Emarty836/React-Tailwind_Dota2RosterNameChange" target='_blank' rel='noopener noreferrer'><div class='github'>Github</div></a>
-            </div>
-        </div>
-    </div>
+  <!--onclick="window.location.reload()"-->
+</form>
+<div class="tab"></div>
+  </div>
+<div id="part2">
+  <h2 class="p-4">1RM Calculations</h2>
 
-    <div id="P3" class="preview">
-        <div class="pLeft"></div>
-        <div class="pRight">
-            <div class="xBox"><svg xmlns="http://www.w3.org/2000/svg" fill='#ffffff' width="16" height="16" viewBox="0 0 24 24"><path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/></svg></div>
-            <h3>Project #3</h3>
-            <h2>FPS Timed Target Practice</h2>
-            <p>My inspiration for this project was while playing Valorant and Rainbow Six Seige on PC, especially on reactionary target practice mode. <b>HTML, CSS, and Vanilla Javascript</b> was used in this website.</p>
-            <div class="link-flex">
-                <a href='https://emarty836.github.io/target-practice/' target='_blank' rel='noopener noreferrer'><div class='site'>Website</div></a>
-                <a href="https://github.com/Emarty836/target-practice" target='_blank' rel='noopener noreferrer'><div class='github'>Github</div></a>
-            </div>
-        </div>
-    </div>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>%1RM</th>
+        <th>Max Reps</th>
+        <th>Added Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>100%</td>
+        <td>1</td>
+        <td id=#rep1></td>
+      </tr>
+      <tr>
+        <td>97%</td>
+        <td>2</td>
+        <td id=#rep2></td>
+      </tr>
+      <tr>
+        <td>94%</td>
+        <td>3</td>
+        <td id=#rep3></td>
+      </tr>
+      <tr>
+        <td>92%</td>
+        <td>4</td>
+        <td id=#rep4></td>
+      </tr>
+      <tr>
+        <td>89%</td>
+        <td>5</td>
+        <td id=#rep5></td>
+      </tr>
+      <tr>
+        <td>86%</td>
+        <td>6</td>
+        <td id=#rep6></td>
+      </tr>
+      <tr>
+        <td>83%</td>
+        <td>7</td>
+        <td id=#rep7></td>
+      </tr>
+      <tr>
+        <td>81%</td>
+        <td>8</td>
+        <td id=#rep8></td>
+      </tr>
+      <tr>
+        <td>78%</td>
+        <td>9</td>
+        <td id=#rep9></td>
+      </tr>
+      <tr>
+        <td>75%</td>
+        <td>10</td>
+        <td id=#rep10></td>
+      </tr>
+      <tr>
+        <td>73%</td>
+        <td>11</td>
+        <td id=#rep11></td>
+      </tr>
+      <tr>
+        <td>71%</td>
+        <td>12</td>
+        <td id=#rep12></td>
+      </tr>
+      <tr>
+        <td>70%</td>
+        <td>13</td>
+        <td id=#rep13></td>
+      </tr>
+      <tr>
+        <td>68%</td>
+        <td>14</td>
+        <td id=#rep14></td>
+      </tr>
+      <tr>
+        <td>67%</td>
+        <td>15</td>
+        <td id=#rep15></td>
+      </tr>
+      <tr>
+        <td>65%</td>
+        <td>16</td>
+        <td id=#rep16></td>
+      </tr>
+      <tr>
+        <td>64%</td>
+        <td>17</td>
+        <td id=#rep17></td>
+      </tr>
+      <tr>
+        <td>63%</td>
+        <td>18</td>
+        <td id=#rep18></td>
+      </tr>
+      <tr>
+        <td>61%</td>
+        <td>19</td>
+        <td id=#rep19></td>
+      </tr>
+      <tr>
+        <td>60%</td>
+        <td>20</td>
+        <td id=#rep20></td>
+      </tr>
+      <tr>
+        <td>58.9% **</td>
+        <td>21</td>
+        <td id=#rep21></td>
+      </tr>
+      <tr>
+        <td>57.9% **</td>
+        <td>22</td>
+        <td id=#rep22></td>
+      </tr>
+      <tr>
+        <td>56.8% *</td>
+        <td>23</td>
+        <td id=#rep23></td>
+      </tr>
+      <tr>
+        <td>56.2% **</td>
+        <td>24</td>
+        <td id=#rep24></td>
+      </tr>
+      <tr>
+        <td>55.5% **</td>
+        <td>25</td>
+        <td id=#rep25></td>
+      </tr>
+      <tr>
+        <td>54.68% *</td>
+        <td>26</td>
+        <td id=#rep26></td>
+      </tr>
+      <tr>
+        <td>53.76% **</td>
+        <td>27</td>
+        <td id=#rep27></td>
+      </tr>
+      <tr>
+        <td>52.8% **</td>
+        <td>28</td>
+        <td id=#rep28></td>
+      </tr>
+      <tr>
+        <td>51.84% **</td>
+        <td>29</td>
+        <td id=#rep29></td>
+      </tr>
+      <tr>
+        <td>50.92% **</td>
+        <td>30</td>
+        <td id=#rep30></td>
+      </tr>
+      <tr>
+        <td>50% *</td>
+        <td>31</td>
+        <td id=#rep31></td>
+      </tr>
+      <tr>
+        <td>48.9% **</td>
+        <td>32</td>
+        <td id=#rep32></td>
+      </tr>
+      <tr>
+        <td>47.8% *</td>
+        <td>33</td>
+        <td id=#rep33></td>
+      </tr>
+      <tr>
+        <td>47.2% **</td>
+        <td>34</td>
+        <td id=#rep34></td>
+      </tr>
+      <tr>
+        <td>46.6% **</td>
+        <td>35</td>
+        <td id=#rep35></td>
+      </tr>
+      <tr>
+        <td>46% **</td>
+        <td>36</td>
+        <td id=#rep36></td>
+      </tr>
 
-    <div id="P4" class="preview">
-        <div class="pLeft"></div>
-        <div class="pRight">
-            <div class="xBox"><svg xmlns="http://www.w3.org/2000/svg" fill='#ffffff' width="16" height="16" viewBox="0 0 24 24"><path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/></svg></div>
-            <h3>Project #4</h3>
-            <h2>Replica #1: Peacock Sign-in page(inactive links)</h2>
-            <p>This is my first website replica which is a Peacock, NBC streaming service, sign-in page. There are no links that go to a new page.<b>HTML, CSS, and vanilla Javascript</b></p>
-            <div class="link-flex">
-                <a href='https://emarty836.github.io/Replica1-peacockStreamSignin/' target='_blank' rel='noopener noreferrer'><div class='site'>Website</div></a>
-                <a href="https://github.com/Emarty836/Replica1-peacockStreamSignin" target='_blank' rel='noopener noreferrer'><div class='github'>Github</div></a>
-            </div>
-        </div>
-    </div>
+    </tbody>
+    </table>
+<br>
+</div>
+<p style="text-align:center">The 1 Rep Max Percentages is from the website: <a href="https://strengthlevel.com/one-rep-max-calculator">https://strengthlevel.com/one-rep-max-calculator</a></p>
+<p>* These reps are personally tested.</p>
+<p>** Estimated reps after testing. </p>
+</div>
+<script src="script2.js">
 
-    <div id="P5" class="preview">
-        <div class="pLeft"></div>
-        <div class="pRight">
-            <div class="xBox"><svg xmlns="http://www.w3.org/2000/svg" fill='#ffffff' width="16" height="16" viewBox="0 0 24 24"><path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/></svg></div>
-            <h3>Project #5</h3>
-            <h2>Pokemon Card Generator (2nd gen) (React)</h2>
-            <p>Prior to this website, I made a vanilla Javascript version of this website and this was the first time working with APIs.  This website stil has the same APIs and is in <b>React</b> along with regular <b>CSS</b>.</p>
-            <div class="link-flex">
-                <a href='https://emarty836.github.io/pokemon-generator-2ndgen-react/' target="_"><div class='site'>Website</div></a>
-                <a href='https://github.com/Emarty836/2ndGenPokemonGenerator' target="_" rel="noopener noreferrer"><div class='github'>Github</div></a>
-            </div>
-        </div>
-    </div>
-
-    <section class="contact" id="contact-link">
-        <div class="contact-text">
-        
-        <p>evanmartinez826@gmail.com</p>
-        </div>
-    </section>
-
-    <div class="social">
-        <div class="social-flex">
-            <div class="social-icon"><a href="https://www.github.com/Emarty836" target="_">
-                <svg xmlns="http://www.w3.org/2000/svg"  width="55" height="55" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a></div>
-            <div class="zone"><span id="gitText">Github</span></div>
-        </div>
-        <div class="social-flex">
-            <div class="social-icon"><a href="https://www.linkedin.com/in/evan-martinez-82217b225/" target="_">
-                <svg xmlns="http://www.w3.org/2000/svg" fill='#ffffff' width="50" height="50" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
-            </a></div>
-            <div class="zone"><span id="linkedinText">Linkedin</span></div>
-        </div>
-        <div class="social-flex">
-            <div class="social-icon"><a href="https://docs.google.com/document/d/1T2TTqvjPwKBpsaN0Aj7ehHcusOeh6_nqOyUHkFapOCk/edit?usp=sharing" target="_">
-                <img src="images/resume-icon.png" width="60px"/>
-            </a></div>
-            <div class="zone"><span id="resumeText">Resume</span></div>
-        </div>
-    </div>
-
-<!-------------------------  End of preview Boxes -------------->
-    <script src="script.js"></script>
+</script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
